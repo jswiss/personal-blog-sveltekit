@@ -1,5 +1,5 @@
 {
-  "name": "~TODO~",
+  "name": "joshua-swiss-blog",
   "version": "0.0.1",
   "scripts": {
     "dev": "svelte-kit dev",
@@ -23,7 +23,12 @@
     "svelte-check": "^2.0.0",
     "svelte-preprocess": "^4.0.0",
     "tslib": "^2.0.0",
-    "typescript": "^4.0.0"
+    "typescript": "^4.0.0",
+    "mdsvex": "^0.9.0",
+    "rehype-autolink-headings": "^5.0.1",
+    "rehype-slug": "^4.0.1",
+    "remark-abbr": "^1.4.1",
+    "remark-github": "^10.0.1"
   },
   "type": "module"
 }
