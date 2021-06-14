@@ -1,0 +1,20 @@
+h1,
+h2,
+h3,
+li,
+a,
+section,
+p,
+#text,
+a.nav-link {
+  color: var(--bg-grey);
+}
+
+.footer-icon {
+  background-color: var(--bg-grey);
+}
+
+html,
+body {
+  background-color: var(--text-white);
+}
