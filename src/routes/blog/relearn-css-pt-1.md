@@ -1,5 +1,4 @@
 ---
-layout: blog
 title: 'Re-learning CSS Part 1: Grid or Flexbox for Layouts?'
 date: 2020-05-01T16:03:45.390Z
 tags: 'tutorial, learning, how to, how-to, css, html, web dev, web
@@ -23,7 +22,7 @@ And thus, this blog series was born. I'm going to relearn CSS and write about it
 
 First up, layouts. Specifically, should I build my layout with CSS Grid or Flexbox?
 
-## Grid or Flexbox?
+### Grid or Flexbox?
 
 According to our good friends at CanIUse (as of 8 May, 2020) both Flexbox and Grid work with the browsers a significant majority of people use.
 
@@ -37,7 +36,7 @@ _[Can I use Flexbox?](https://caniuse.com/#feat=flexbox)_
 
 While Grid has a bit more red in its image, it still works with the browsers 95% of the population use. For my audience, that works fine. If you need to accommodate for that remaining ~5%, I'd suggest adding appropriate polyfills.
 
-## Building Layouts
+### Building Layouts
 
 Most layouts look something like this:
 
@@ -49,7 +48,7 @@ So, let's build this layout using both CSS Grid and Flexbox!
 
 Here's the layout using Grid:
 
-<iframe height="350" style="width: 70%;" scrolling="no" title="Basic Layout - Grid" src="https://codepen.io/jswiss/embed/BaorJOo?height=350&theme-id=dark&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+<iframe height="450" style="width: 100%;" scrolling="no" title="Basic Layout - Grid" src="https://codepen.io/jswiss/embed/BaorJOo?height=350&theme-id=dark&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/jswiss/pen/BaorJOo'>Basic Layout - Grid</a> by Joshua Swiss
   (<a href='https://codepen.io/jswiss'>@jswiss</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
@@ -63,7 +62,7 @@ Overall, pretty simple! However, there are a few things worth noting, that may n
 
 Now, let's check out the same layout, this time using Flexbox:
 
-<iframe height="350" style="width: 70%;" scrolling="no" title="Basic Layout - Flexbox" src="https://codepen.io/jswiss/embed/dyYmdWy?height=350&theme-id=dark&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+<iframe height="450" style="width: 100%;" scrolling="no" title="Basic Layout - Flexbox" src="https://codepen.io/jswiss/embed/dyYmdWy?height=350&theme-id=dark&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/jswiss/pen/dyYmdWy'>Basic Layout - Flexbox</a> by Joshua Swiss
   (<a href='https://codepen.io/jswiss'>@jswiss</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
@@ -75,11 +74,11 @@ A little more verbose! I wrapped the second row in a `section` element so I coul
 - I gave the header and footer and the asides default height and width; and
 - I gave the main article a margin left and right of `1em`, and set it to `flex-grow: 1`. `flex-grow` allows the `article` element to expand to take up the extra space in the `flex-row` it is in.
 
-### BONUS!
+#### BONUS!
 
 Here's the same layout using Bootstrap!
 
-<iframe height="350" style="width: 70%;" scrolling="no" title="Basic Grid - Bootstrap" src="https://codepen.io/jswiss/embed/xxwWWqO?height=350&theme-id=dark&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+<iframe height="450" style="width: 100%;" scrolling="no" title="Basic Grid - Bootstrap" src="https://codepen.io/jswiss/embed/xxwWWqO?height=350&theme-id=dark&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/jswiss/pen/xxwWWqO'>Basic Grid - Bootstrap</a> by Joshua Swiss
   (<a href='https://codepen.io/jswiss'>@jswiss</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
@@ -90,7 +89,7 @@ I cannot tell you how long I've spent fiddling with different configurations of 
 
 So, if you still need Flexbox to use Bootstrap, why do you need to use Bootstrap. It's a very good question...
 
-## Which to use?
+### Which to use?
 
 In the end, I prefer Grid for layouts or anything two-dimensional, and Flexbox for one-dimensional renderings (like the icons in the bottom of my site!) or for components. Of course, that's personal preference; yours may differ, and mine may change over time!
 
