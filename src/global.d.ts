@@ -21,4 +21,7 @@ interface Post {
 	metadata: Metadata;
 	filename: string;
 	date?: number;
+	slug: string;
+	title: string;
 }
+li;

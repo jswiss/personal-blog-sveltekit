@@ -11,9 +11,9 @@
 	}
 </script>
 
-<script>
+<script lang="ts">
 	import BlogCard from '$lib/components/BlogCard.svelte';
-	export let posts;
+	export let posts: Post[];
 </script>
 
 <svelte:head>
