@@ -1,14 +1,14 @@
 import { slugFromPath } from '$lib/util';
 
-interface Body {
-	body: Metadata;
-}
-
 /**
  * @type {import('@sveltejs/kit').RequestHandler}
  */
+
+interface Body {
+	body: Metadata;
+}
 export async function get({ params }): Promise<Body | Status> {
-	const modules = import.meta.glob(`./posts/*.{md,svx,svelte.md}`);
+	const modules = import.meta.glob(`./*.{md,svx,svelte.md}`);
 
 	let match;
 	for (const [path, resolver] of Object.entries(modules)) {

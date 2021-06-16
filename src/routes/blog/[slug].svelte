@@ -1,62 +1,60 @@
 <script context="module" lang="ts">
-  export async function preload({ params }) {
-    // the `slug` parameter is available because
-    // this file is called [slug].svelte
-    const res = await this.fetch(`blog/${params.slug}.json`);
-    const data = await res.json();
-
-    if (res.status === 200) {
-      return { post: data };
-    } else {
-      this.error(res.status, data.message);
-    }
-  }
+	export async function load({ page, fetch }) {
+		console.log(page);
+		const post = await fetch(`${page.path}.json`).then((res) => res.json());
+		if (!post || !post.published) {
+			return {
+				status: 404,
+				error: new Error('Post could not be found')
+			};
+		}
+		return {
+			props: {
+				post
+			}
+		};
+	}
 </script>
 
 <script lang="ts">
-  export let post: Post;
+	export let post: Metadata;
 </script>
 
-<style>
-  h1 {
-    margin-bottom: 3rem;
-  }
-  .content :global(h2) {
-    font-size: 1.4em;
-    font-weight: 500;
-  }
-  .content :global(pre) {
-    background-color: #f9f9f9;
-    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.05);
-    padding: 0.5em;
-    border-radius: 2px;
-    overflow-x: auto;
-  }
-  .content :global(pre) :global(code) {
-    background-color: transparent;
-    padding: 0;
-  }
-  .content :global(ul) {
-    line-height: 1.5;
-  }
-  .content :global(li) {
-    margin: 0 0 0.5em 0;
-  }
-  .content :global(img, twitter-widget) {
-    max-width: 100%;
-    height: auto;
-  }
-
-</style>
-
 <svelte:head>
-  <title>{post.metadata.title}</title>
-  <meta name="keywords" content={post.metadata.tags}>
-  <meta name="description" content={post.metadata.summary}>
+	<title>{post.title}</title>
+	<meta name="keywords" content={post.tags} />
+	<meta name="description" content={post.summary} />
 </svelte:head>
 
-<h1>{post.metadata.title}</h1>
+<h2>{post.title}</h2>
 
-<div class="content">
-  {@html post.html}
-</div>
+<section>
+	<slot />
+</section>
+
+<style>
+	section :global(pre) {
+		background-color: #f9f9f9;
+		box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.05);
+		padding: 0.5em;
+		border-radius: 2px;
+		overflow-x: auto;
+	}
+	section :global(pre) :global(code) {
+		background-color: transparent;
+		padding: 0;
+	}
+	section :global(ul) {
+		line-height: 1.5;
+	}
+	section :global(li) {
+		margin: 0 0 0.5em 0;
+	}
+	section :global(img, twitter-widget) {
+		max-width: 100%;
+		height: auto;
+	}
+	h2 {
+		margin-bottom: 2rem;
+	}
+</style>
