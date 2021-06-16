@@ -32,8 +32,7 @@
 		font-family: 'Gilroy';
 		src: url('/fonts/gilroy-extrabold.otf');
 	}
-	h1,
-	h2 {
+	h1 {
 		display: inline;
 		text-align: center;
 		font-size: 4rem;

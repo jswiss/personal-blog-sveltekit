@@ -55,5 +55,9 @@
 	}
 	h2 {
 		margin-bottom: 2rem;
+		display: inline;
+		text-align: center;
+		font-size: 4rem;
+		font-family: 'Gilroy';
 	}
 </style>

@@ -27,11 +27,9 @@ body {
   display: grid;
   grid-template-areas:
     'nav'
-    /* "leftSection main rightSection" */
     'main'
     'footer';
   grid-template-rows: auto 1fr auto;
-  /* grid-template-columns: auto 1fr auto; */
 }
 
 nav {
@@ -50,6 +48,11 @@ main {
 
 footer {
   grid-area: footer;
+  position:fixed;
+  left:0rem;
+  bottom:0rem;
+  height:4rem;
+  width:100%;
 }
 
 h1,
