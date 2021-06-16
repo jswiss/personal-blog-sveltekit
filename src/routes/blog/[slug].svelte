@@ -1,6 +1,5 @@
 <script context="module" lang="ts">
 	export async function load({ page, fetch }) {
-		console.log(page);
 		const post = await fetch(`${page.path}.json`).then((res) => res.json());
 		if (!post || !post.published) {
 			return {
@@ -51,7 +50,7 @@
 		margin: 0 0 0.5em 0;
 	}
 	section :global(img, twitter-widget) {
-		max-width: 100%;
+		max-width: fit-content;
 		height: auto;
 	}
 	h2 {
