@@ -83,3 +83,7 @@ p {
 a {
   color: inherit;
 }
+
+p > img {
+  max-width: 100%;
+}
