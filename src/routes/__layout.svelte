@@ -43,4 +43,9 @@
 		grid-template-rows: auto 1fr;
 		font-family: 'Swansea';
 	}
+	#main-border {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 </style>

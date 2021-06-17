@@ -22,7 +22,7 @@ body {
   color: black;
 }
 
-#sapper {
+#svelte {
   min-height: 100vh;
   display: grid;
   grid-template-areas:
@@ -38,7 +38,7 @@ nav {
 
 main {
   grid-area: main;
-  max-width: 60%;
+  max-width: 60vw;
   /* max-width: 56em; */
   min-height: auto;
   /* padding: 2em; */
@@ -74,11 +74,11 @@ h2 {
   font-size: 1.6rem;
 }
 h3 {
-  margin: 2rem 0;
   font-size: 1.6rem;
+  margin-bottom: -.5rem;
 }
 p {
-  margin: 1em auto;
+  margin: .8em auto;
   font-size: 1.2em;
   text-align: left;
 }

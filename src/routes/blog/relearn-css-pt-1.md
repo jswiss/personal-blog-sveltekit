@@ -1,5 +1,5 @@
 ---
-title: 'Re-learning CSS Part 1: Grid or Flexbox for Layouts?'
+title: 'Re-Learning CSS Part 1: Grid or Flexbox for Layouts?'
 date: 2020-05-01T16:03:45.390Z
 tags: 'tutorial, learning, how to, how-to, css, html, web dev, web
   development, css-grid, grid, flexbox, layout, columns '

@@ -32,7 +32,7 @@
 	a:hover {
 		text-decoration: underline;
 	}
-	.blog-card {
+	article {
 		display: flex;
 		flex-direction: column;
 		margin: 0.8rem;
