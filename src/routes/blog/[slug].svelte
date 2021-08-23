@@ -49,7 +49,11 @@
 	section :global(li) {
 		margin: 0 0 0.5em 0;
 	}
-	section :global(img, twitter-widget) {
+	section :global(img) {
+		max-width: fit-content;
+		height: auto;
+	}
+	section :global(twitter-widget) {
 		max-width: fit-content;
 		height: auto;
 	}
