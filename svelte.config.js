@@ -1,5 +1,5 @@
 import { mdsvex } from 'mdsvex';
-const netlify = require('@sveltejs/adapter-netlify');
+import netlify from '@sveltejs/adapter-netlify';
 import preprocess from 'svelte-preprocess';
 import { mdsvexConfig } from './mdsvex.config.js';
 
